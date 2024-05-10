@@ -1,23 +1,52 @@
-# Getting Started with [Fastify-CLI](https://www.npmjs.com/package/fastify-cli)
-This project was bootstrapped with Fastify-CLI.
+# Oudtshoorn
 
-## Available Scripts
+This Fastify application integrates fastify-oauth2 and fastify-jwt to create a robust backend API server, powered by
+MongoDB for efficient data storage. The primary focus is on providing a smooth authentication experience for users. By
+incorporating OAuth2 authentication mechanisms from Google, Discord, Facebook, GitHub, GitLab, and traditional email
+addresses, the app ensures versatility and accessibility. Users can seamlessly authenticate using their preferred
+platform or email, enhancing user engagement and satisfaction. This setup not only simplifies the authentication process
+but also offers a secure and scalable solution for modern web applications.
 
-In the project directory, you can run:
+## Requirement
 
-### `npm run dev`
+- [Docker](https://docs.docker.com/install)
 
-To start the app in dev mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup
 
-### `npm start`
+- Clone the repository
 
-For production mode
+```bash
+git clone git@github.com:longbowou/Oudtshoorn.git
+```
 
-### `npm run test`
+- Build the application
 
-Run the test cases.
+```bash
+docker compose build
+```
 
-## Learn More
+- Update environments variable
 
-To learn Fastify, check out the [Fastify documentation](https://fastify.dev/docs/latest/).
+```bash
+cp .env.example .env
+```
+
+- Install dependencies
+
+```bash
+docker compose run --rm app pnpm install
+```
+
+- Compiles and minifies for production
+
+```bash
+docker compose run --rm app pnpm build
+```
+
+## Where is the application running?
+
+- App - [http://localhost:8000](http://localhost:8000)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

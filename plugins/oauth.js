@@ -8,8 +8,8 @@ module.exports = fp(async function (fastify, opts) {
         name: 'facebookOAuth2',
         credentials: {
             client: {
-                id: '769635451974193',
-                secret: '3d59fd26b0f1452d40407d6b0d404304'
+                id: process.env.OAUTH_FACEBOOK_CLIENT_ID,
+                secret: process.env.OAUTH_FACEBOOK_CLIENT_SECRET,
             },
             auth: oauthPlugin.FACEBOOK_CONFIGURATION
         },
@@ -26,8 +26,8 @@ module.exports = fp(async function (fastify, opts) {
         scope: ['profile', 'email'],
         credentials: {
             client: {
-                id: '843220945556-nmruj7bttqp8j1o8gkvu0ula15ac7su6.apps.googleusercontent.com',
-                secret: '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'
+                id: process.env.OAUTH_GOOGLE_CLIENT_ID,
+                secret: process.env.OAUTH_GOOGLE_CLIENT_SECRET,
             },
             auth: oauthPlugin.GOOGLE_CONFIGURATION
         },
@@ -43,8 +43,8 @@ module.exports = fp(async function (fastify, opts) {
         name: 'githubOAuth2',
         credentials: {
             client: {
-                id: 'Ov23liu7IRIhY3ol23n2',
-                secret: 'e14c515e79ce746eae327ac18b79ce174b3310da'
+                id: process.env.OAUTH_GITHUB_CLIENT_ID,
+                secret: process.env.OAUTH_GITHUB_CLIENT_SECRET,
             },
             auth: oauthPlugin.GITHUB_CONFIGURATION
         },
@@ -61,8 +61,8 @@ module.exports = fp(async function (fastify, opts) {
         scope: ['read_user'],
         credentials: {
             client: {
-                id: '0f45e0e16b6a219a9b8970fb117fff5dcfb463ca6dc07fce1b297497cd348bb1',
-                secret: 'gloas-73f330d3f02f82f42eb5437d466160686ef8e5cff41b6aa0a50ce75aeb544cb5'
+                id: process.env.OAUTH_GITLAB_CLIENT_ID,
+                secret: process.env.OAUTH_GITLAB_CLIENT_SECRET,
             },
             auth: oauthPlugin.GITLAB_CONFIGURATION
         },
@@ -79,8 +79,8 @@ module.exports = fp(async function (fastify, opts) {
         scope: ['email', 'identify'],
         credentials: {
             client: {
-                id: '1238355445572309066',
-                secret: 'ONNRq0qu6_wvYPfZltA_pKie-W2JEZVd'
+                id: process.env.OAUTH_DISCORD_CLIENT_ID,
+                secret: process.env.OAUTH_DISCORD_CLIENT_SECRET,
             },
             auth: oauthPlugin.DISCORD_CONFIGURATION
         },
